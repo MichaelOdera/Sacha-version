@@ -1,0 +1,115 @@
+<div>
+    <nav class="d-flex justify-content-between navbar navbar-expand-md navbar-dark bg-dark shadow-sm sticky-top">
+        <div> <a class="navbar-brand js-scroll-trigger text-white" routerLink="/">Dokutela</a></div>
+        <div>
+            <button id="sidebarCollapse" class="navbar-btn" (click)="toggleSidebar()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-align-justify"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <ul class="list-unstyled CTAs">
+                <li (click)="logout()">
+                    Logout
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content" class="container">
+            <div class="profile">
+                <div class="container">
+                    <div class="profile">
+                        <img src="assets/img/Rectangle 54.png" alt="profile" />
+                        <div style="text-transform: uppercase;">Hello {{ pharmacyData.name }}</div>
+                    </div>
+                     <div style="text-align:center;">
+                         <button class="btn btn-md btn-success" (click)="updateProfile()">Update Profile</button>
+                     </div>
+                    <div class="row">
+                        <div class="col bio">
+                            <div>Orders</div>
+                            <div>{{ pharmacyData.orders }}</div>
+                        </div>
+                        <div class="col bio">
+                            <div>Address</div>
+                            <div>{{ pharmacyData.address }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col bio">
+                            <div>New Entries</div>
+                            <div>24</div>
+                        </div>
+                        <div class="col bio">
+                            <div>Pending</div>
+                            <div>5</div>
+                        </div>
+                        <div class="col bio">
+                            <div>Due Today</div>
+                            <div>5</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div style="text-align: center; text-transform: uppercase;">
+                        Task List
+                    </div>
+                </div>
+                <div style="
+                    white-space: nowrap;
+                    overflow-x: scroll;
+                    overflow-y: hidden">
+                    <table class="table mx-4 mt-3">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Due Date</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">View</th>
+                            </tr>
+                        </thead>
+                        <tbody style="background-color: #F8F7FF; ">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Ada</td>
+                                <td>4/3/2020</td>
+                                <td>Kigali Center
+                                    <div style="color: #707070;">Street 24</div>
+                                </td>
+                                <td>Delivering</td>
+                                <td class="px-4">
+                                    <button class="btn btn-sm btn-success px-2 py-1 ">VIEW</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Lubanzi</td>
+                                <td>4/5/2020</td>
+                                <td>Soweto
+                                    <div style="color: #707070;">Vilakazi Street</div>
+                                </td>
+                                <td>Pending</td>
+                                <td class="px-4">
+                                    <button class="btn btn-sm btn-success px-2 py-1 ">VIEW</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

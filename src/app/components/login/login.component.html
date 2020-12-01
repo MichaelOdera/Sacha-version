@@ -1,0 +1,21 @@
+<div>
+    <app-navbar></app-navbar>
+    <div class="container col-md-9">
+        <form (ngSubmit)="login()">
+            <div class="field">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" class="form-control" name="phoneNumber" placeholder="0712345678"
+                    [(ngModel)]="phoneNumber">
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="********"
+                    [(ngModel)]="password">
+            </div>
+            <div class="text-danger" *ngIf="showError">Phone number or Password incorrect</div>
+            <button type="submit" class="btn btn-md btn-success mr-2">SUBMIT</button>
+            <a routerLink="/" class="btn btn-secondary">CANCEL</a>
+            <p> <a routerLink="/register">Create an account</a></p>
+        </form>
+    </div>
+</div>

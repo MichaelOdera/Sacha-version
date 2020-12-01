@@ -1,0 +1,62 @@
+<div style="text-align:center;">
+    <app-navbar></app-navbar>
+    <div>
+        <h2>Profile</h2>
+        <div class="row">
+            <div class="col decor">
+                <label for="fname">Full name</label>
+                <div>{{ orderData.name }}</div>
+            </div>
+            <div class="col decor">
+                <label for="phonenumber">Phone number</label>
+                <div>{{ orderData.phone }}</div>
+            </div>
+            <div class="col decor">
+                <label for="address">Address</label>
+                <div>{{ orderData.address }}</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Prescription</h2>
+        <div class="row">
+            <div class="col decor">
+                <label for="medication">Medication</label>
+                <div>{{ orderData.medication }}</div>
+            </div>
+            <div class="col decor">
+                <label for="dosage">Dosage</label>
+                <div>{{ orderData.dosage }}</div>
+            </div>
+            <div class="col decor">
+                <label for="time">Time</label>
+                <div>{{ orderData.time }}</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Details</h2>
+        <div class="row">
+            <div class="col decor">
+                <label for="order number">Order Number</label>
+                <div>{{ orderData.orderNumber }}</div>
+            </div>
+            <div class="col decor">
+                <label for="pick up date">Pick up Date</label>
+                <div>{{ orderData.pickUpDate }}</div>
+            </div>
+            <div class="col decor">
+                <label for="pick up location">Pick up Location</label>
+                <div>{{ orderData.pickUpLocation }}</div>
+            </div>
+            <div class="col decor">
+                <label for="pick up contact">Pick up Contact</label>
+                <div>{{ orderData.pickUpContact }}</div>
+            </div>
+        </div>
+        <div class="decor">
+            <label for="additional message">Additional Message</label>
+            <div>{{ orderData.additionalMessage }}</div>
+        </div>
+    </div>
+</div>
