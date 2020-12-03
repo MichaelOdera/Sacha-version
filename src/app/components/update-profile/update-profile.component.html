@@ -1,0 +1,105 @@
+<div>
+    <app-navbar></app-navbar>
+    <div class="container col-md-9 mt-5">
+        <h1>Update Profile</h1>
+        <div *ngIf="isPatient">
+            <form (ngSubmit)="updatePatientProfile()">
+                <div class="form-group">
+                    <label class="label">Date of Birth</label>
+                    <input name="patientDob" type="date" class="input form-control" required [(ngModel)]="patientDob">
+                </div>
+                <div class="form-group">
+                    <label class="label">Age</label>
+                    <input name="patientAge" type="number" max="99" min="1" class="input form-control" required
+                        [(ngModel)]="patientAge">
+                </div>
+                <div class="form-group">
+                    <label class="label">Location</label>
+                    <input name="patientLocation" type="text" class="input form-control" required
+                        [(ngModel)]="patientLocation">
+                </div>
+                <div class="form-group">
+                    <label class="label">Weight (kgs)</label>
+                    <input name="patientWeight" type="number" class="input form-control" required
+                        [(ngModel)]="patientWeight">
+                </div>
+                <div class="form-group">
+                    <label class="label">Heart Rate</label>
+                    <input name="patientHeartRate" type="number" class="input form-control" required
+                        [(ngModel)]="patientHeartRate">
+                </div>
+                <div class="form-group">
+                    <label class="label">Temperature (celsius)</label>
+                    <input name="patientTemperature" type="number" class="input form-control" required
+                        [(ngModel)]="patientTemperature">
+                </div>
+                <div class="form-group">
+                    <label class="label">Pin Code</label>
+                    <input name="patientPincode" type="text" class="input form-control" required
+                        [(ngModel)]="patientPincode">
+                </div>
+                <button type="submit" class="btn btn-sm btn-success">SUBMIT</button>
+            </form>
+        </div>
+        <div *ngIf="isDoctor">
+            <form (ngSubmit)="updateDoctorProfile()">
+                <div class="form-group">
+                    <label class="label">Experience</label>
+                    <input name="doctorExpi" type="number" min="1" class="input form-control" required
+                        [(ngModel)]="doctorExpi">
+                </div>
+                <div class="form-group">
+                    <label class="label">Department</label>
+                    <input name="doctorDep" type="text" class="input form-control" required
+                        [(ngModel)]="doctorDep">
+                </div>
+                <div class="form-group">
+                    <label class="label">Area of Specialization</label>
+                    <input name="doctorAos" type="text" class="input form-control" required
+                        [(ngModel)]="doctorAos">
+                </div>
+                <div class="form-group">
+                    <label class="label">Qualification</label>
+                    <input name="doctorQual" type="text" class="input form-control" required
+                        [(ngModel)]="doctorQual">
+                </div>
+                <div class="form-group">
+                    <label class="label">Address</label>
+                    <input name="doctorAddress" type="text" class="input form-control" required
+                        [(ngModel)]="doctorAddress">
+                </div>
+                <div class="form-group">
+                    <label class="label">Pin Code</label>
+                    <input name="doctorPincode" type="text" class="input form-control" required
+                        [(ngModel)]="doctorPincode">
+                </div>
+                <button type="submit" class="btn btn-sm btn-success">SUBMIT</button>
+            </form>
+        </div>
+        <div *ngIf="isPharmacy">
+            <form (ngSubmit)="updatePharmacyProfile()">
+                <div class="form-group">
+                    <label class="label">Address</label>
+                    <input name="pharmacyAddress" type="text" class="input form-control" required
+                        [(ngModel)]="pharmacyAddress">
+                </div>
+                <div class="form-group">
+                    <label class="label">Pin Code</label>
+                    <input name="pharmacyPincode" type="text" class="input form-control" required
+                        [(ngModel)]="pharmacyPincode">
+                </div>
+                <div class="form-group">
+                    <label class="label">Balance</label>
+                    <input name="pharmacyBalance" type="number" class="input form-control" required
+                        [(ngModel)]="pharmacyBalance">
+                </div>
+                <div class="form-group">
+                    <label class="label">Orders</label>
+                    <input name="pharmacyOrders" type="number" class="input form-control" required
+                        [(ngModel)]="pharmacyOrders">
+                </div>
+                <button type="submit" class="btn btn-sm btn-success">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</div>

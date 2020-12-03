@@ -1,0 +1,29 @@
+<div>
+    <app-navbar></app-navbar>
+    <div class="d-flex flex-row mb-3">
+        <div class="d-flex flex-column justify-content-center align-items-center  mb-3 w-50 py-5"
+            style="background-color: #A2E2F7; font-size: 1.5rem;">
+            <div class="p-2 ">{{currentQuestion.question }}?</div>
+        </div>
+        <div class="mb-3 w-50 p-4" style="background-color: #58BA85;">
+            <div *ngIf="currentQuestion.options.showOrHide">
+                <div class="d-flex flex-column align-items-between justify-content-center"
+                    *ngFor="let option of currentQuestion.options.value">
+                    <div class=" btn btn-light shadow-sm p-4 my-1" (click)="selectOption(option)"
+                        [ngClass]="highlightOption(option)">
+                        {{option}}
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="currentQuestion.showOrHideInputAnswer">
+                <form class="d-flex flex-column align-items-between justify-content-center"
+                    (ngSubmit)="collectAnswer()">
+                    <textarea name="inputAnswer" cols="30" rows="5" placeholder="Enter answer here..."
+                        class="rounded mt-4" [(ngModel)]="inputAnswer"></textarea>
+                    <button type="submit" class="btn btn-light shadow-sm p-1 ">Send answer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

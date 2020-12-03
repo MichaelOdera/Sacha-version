@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.decor {
+  margin: 10px;
+  background-color: #F8F7FF;
+  padding: 12px;
+  text-align: center;
+  margin-bottom: 50px;
+}

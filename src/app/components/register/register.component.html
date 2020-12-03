@@ -1,0 +1,57 @@
+<div>
+    <app-navbar></app-navbar>
+    <div class="container col-md-9">
+        <!-- registration form -->
+        <form (ngSubmit)="register()">
+            <!-- userType -->
+            <div class="form-group">
+                <label class="label">User type</label>
+                <select name="userType" [(ngModel)]="userType">
+                    <option value="patient">Patient</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="pharmacy">Pharmacy</option>
+                </select>
+            </div>
+            <!-- name -->
+            <div class="form-group">
+                <label class="label">Name</label>
+                <input name="nameInput" class="input form-control" required [(ngModel)]="nameInput" #name="ngModel">
+                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+                    <div *ngIf="name.errors.required">
+                        Name cannot be empty.
+                    </div>
+
+                </div>
+            </div>
+            <!-- phone -->
+            <div class="form-group">
+                <label class="label">Phone</label>
+                <input type="tel" name="phone" class="input form control" required [(ngModel)]="phone" #fone="ngModel">
+                <div *ngIf="fone.invalid && (fone.dirty || fone.touched)" class="alert alert-danger">
+
+                    <div *ngIf="fone.errors.required">
+                        Phone cannot be empty.
+                    </div>
+
+                </div>
+            </div>
+            <!-- password -->
+            <div class="form-group">
+                <label class="label">Password</label>
+                <input type="password" name="password" class="input form-control" required [(ngModel)]="password" #pasword="ngModel">
+                <div *ngIf="pasword.invalid && (pasword.dirty || pasword.touched)" class="alert alert-danger">
+
+                    <div *ngIf="pasword.errors.required">
+                        Password cannot be empty.
+                    </div>
+
+                </div>
+            </div>
+            <!-- register button -->
+            <button type="submit" class="btn btn-lg btn-success">REGISTER</button>
+            <p>Already have an account? <a routerLink="/login">Login</a></p>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,215 @@
+<div>
+    <nav class="d-flex justify-content-between navbar navbar-expand-md navbar-dark bg-dark shadow-sm sticky-top">
+        <div> <a class="navbar-brand js-scroll-trigger text-white" routerLink="/">Dokutela</a></div>
+        <div>
+            <button id="sidebarCollapse" class="navbar-btn" (click)="toggleSidebar()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-align-justify"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <ul class="list-unstyled CTAs">
+                <li (click)="logout()">
+                    Logout
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content" class="container">
+            <div class="profile">
+                <img src="../../../assets/img/profile.svg" alt="profile" />
+                <div style="text-transform: uppercase;">Hello {{ patientProfileData.name }}</div>
+            </div>
+            <div style="text-align:center;">
+                <button class="btn btn-md btn-success" (click)="updateProfile()">Update Profile</button>
+            </div>
+            <div class="row">
+                <div class="col bio">
+                    <div>Age</div>
+                    <div>{{ patientProfileData.age }}</div>
+                </div>
+                <div class="col bio">
+                    <div>Last visit</div>
+                    <div>02/09/2020</div>
+                </div>
+            </div>
+            <div>
+                <div style="text-align: center; text-transform: uppercase; margin-top: 50px;">
+                    Last time we checked
+                </div>
+            </div>
+            <div class="row bmi">
+                <div class="col-md-4">
+                    <div class="row bmiData">
+                        <div class="col">
+                            <img src="../../../assets/img/heart-rate.svg" alt="heart">
+                        </div>
+                        <div class="col">
+                            <div>Heart Rate</div>
+                            <div>{{ patientProfileData.weight }} bpm</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row bmiData">
+                        <div class="col">
+                            <img src="../../../assets/img/weight.svg" alt="weight">
+                        </div>
+                        <div class="col">
+                            <div>Weight</div>
+                            <div>{{ patientProfileData.weight }} kg</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row bmiData">
+                        <div class="col">
+                            <img src="../../../assets/img/thermometer.svg" alt="thermometer">
+                        </div>
+                        <div class="col">
+                            <div>Temperature</div>
+                            <div>{{ patientProfileData.temperature }}&#176; celsius</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="text-align: center; text-transform: uppercase;">
+                    Current Prescription
+                </div>
+                <div class="mt-2" style="text-align:center; ">
+                    <button class="btn btn-md btn-success mr-2">Request Prescription</button>
+                    <button class="btn btn-md btn-success mt-1 mt-md-0 mt-lg-0">Check Up</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class=" prescription">
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="../../../assets/img/tablets.svg" alt="tablets">
+                                </div>
+                                <div class="col">
+                                    <div>Rivarixaban</div>
+                                    <div>Anticoagulant</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="../../../assets/img/dosage-bottle.svg" alt="dosage">
+                                        </div>
+                                        <div class="col">
+                                            <div>2.5mg</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="../../../assets/img/time-clock.svg" alt="time">
+                                        </div>
+                                        <div class="col">
+                                            <div>Twice daily</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class=" prescription">
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="../../../assets/img/tablets.svg" alt="tablets">
+                                </div>
+                                <div class="col">
+                                    <div>Rivarixaban</div>
+                                    <div>Anticoagulant</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="../../../assets/img/dosage-bottle.svg" alt="dosage">
+                                        </div>
+                                        <div class="col">
+                                            <div>2.5mg</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="../../../assets/img/time-clock.svg" alt="time">
+                                        </div>
+                                        <div class="col">
+                                            <div>Twice daily</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class=" prescription">
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="../../../assets/img/tablets.svg" alt="tablets">
+                                </div>
+                                <div class="col">
+                                    <div>Rivarixaban</div>
+                                    <div>Anticoagulant</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="../../../assets/img/dosage-bottle.svg" alt="dosage">
+                                        </div>
+                                        <div class="col">
+                                            <div>2.5mg</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="../../../assets/img/time-clock.svg" alt="time">
+                                        </div>
+                                        <div class="col">
+                                            <div>Twice daily</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>
